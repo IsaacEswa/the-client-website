@@ -1,1 +1,159 @@
-/* CSS */
+:root {
+    --groen: #347172;
+    --oranje: #D09482;
+    --donkergroen: #1B4243;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+}
+
+h1,
+h2,
+h3 {
+    color: var(--donkergroen);
+}
+
+h1,
+h3 {
+    font-family: Inter;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--groen);
+}
+
+body {
+    background: #FAF9F6;
+    padding: 0 15px;
+}
+
+header {
+    background: white;
+}
+
+/* BEGIN LOGO'S */
+.logo-secundair {
+    width: 50px;
+}
+
+.logo-primair {
+    display: none;
+}
+
+.logo-secundair {
+    display: block;
+}
+
+/* EINDE LOGO'S */
+
+/* BEGIN BUTTONS */
+.btn-primair {
+    background-color: var(--groen);
+    color: white;
+    padding: 8px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.btn-primair-small {
+    background-color: var(--groen);
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.btn-tertiair:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f061";
+    display: inline-block;
+    padding-left: 15px;
+}
+
+/* EINDE BUTTONS */
+
+.featured-half-img {
+    height: 200px;
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-nieuws h2 {
+    text-align: center;
+}
+
+.nieuws-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.nieuws-card {
+    background: white;
+    width: 100%;
+    position: relative;
+
+    p {
+        color: #484848;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
+
+.nieuws-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.nieuws-card .panel {
+    padding: 5%;
+    border-radius: 15px;
+}
+
+.btn-primair-small,
+.nieuws-datum {
+    position: absolute;
+    bottom: 5%;
+}
+
+.btn-primair-small {
+    left: 5%;
+}
+
+.nieuws-datum {
+    right: 5%;
+}
+
+
+@media (min-width: 768px) {
+    .logo-primair {
+        display: block;
+    }
+
+    .logo-secundair {
+        display: none;
+    }
+
+    .nieuws-card {
+        width: 30%;
+    }
+}
