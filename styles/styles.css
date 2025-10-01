@@ -162,12 +162,12 @@ header {
 
 
 
-div.c {
-    position: relative;
-    margin: 2em;
+div.accordion {
+    /* position: relative; */
+    /* margin: 2em; */
 }
 
-input {
+.accordion input {
     position: absolute;
     left: 0;
     top: 0;
@@ -177,52 +177,66 @@ input {
     visibility: 0;
 }
 
-h1 {
-    background: steelblue;
+.accordion .acc-title {
+    background: var(--groen);
     color: white;
     padding: 1em;
     position: relative;
+    border-radius: 15px 15px 0 0;
 }
 
-label::before {
-    content: "";
+
+/* Accordion open */
+.accordion label::before {
+    /* content: "";
     display: inline-block;
     border: 15px solid transparent;
-    border-left: 20px solid white;
+    border-left: 20px solid white; */
+
+
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
 }
 
-label {
+.accordion label {
     cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-div.p {
+.accordion div.p {
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s;
     background-color: white;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
 }
 
-div.p p {
+.accordion div.p p {
     padding: 2em;
 }
 
-input:checked~h1 label::before {
-    border-left: 15px solid transparent;
+/* Accordion dicht */
+.accordion input:checked~.acc-title label::before {
+    /* border-left: 15px solid transparent;
     border-top: 20px solid white;
     margin-top: 12px;
-    margin-right: 10px;
+    margin-right: 10px; */
+
+
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
 }
 
-input:checked~h1~div.p {
-    max-height: 100px;
+.accordion input:checked~.acc-title~div.p {
+    max-height: 100vh;
+    border-radius: 0 0 15px 15px;
 }
 
-a {
-    color: steelblue;
+.accordion a {
+    color: var(--groen);
 }
 
 
