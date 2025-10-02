@@ -16,7 +16,7 @@
 }
 
 body {
-    line-height: 1.4;
+    line-height: 1.5;
     font-size: 16px;
     background: #FAF9F6;
     /* padding: 0 15px; */
@@ -41,6 +41,7 @@ body {
 h2,
 h3 {
     color: var(--donkergroen);
+    margin-bottom: 10px;
 }
 
 h1,
@@ -61,14 +62,36 @@ p {
 .subtitle {
     border: 1px solid var(--oranje);
     display: inline-block;
-    padding: 12px;
+    padding: 10px 15px;
     color: var(--oranje);
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 
 header {
     background: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li,
+.sidebar a {
+    width: 100%;
+
 }
 
 
@@ -77,8 +100,16 @@ header {
 .featured-half-02 {
     padding: var(--paddingsides);
     margin-top: 60px;
-    ;
+
 }
+
+.featured-half-01,
+.featured-half-02 {
+    .btn-primair {
+        margin-top: 10px;
+    }
+}
+
 
 
 /* BEGIN LOGO'S */
@@ -86,8 +117,10 @@ header {
     width: 50px;
 }
 
-.logo-primair {
+.logo-primair,
+.navigation {
     display: none;
+
 }
 
 .logo-secundair {
@@ -142,10 +175,11 @@ header {
 /* EINDE BUTTONS */
 
 .featured-half-img {
-    height: 200px;
+    height: 350px;
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
+    margin-top: 30px;
 }
 
 .home-nieuws h2 {
@@ -201,14 +235,15 @@ header {
 }
 
 div.accordion {
+    margin-top: 10px;
     /* position: relative; */
     /* margin: 2em; */
 }
 
 .accordion input {
     position: absolute;
-    left: 0;
-    top: 0;
+    /* left: 0;
+    top: 0; */
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -216,7 +251,7 @@ div.accordion {
 }
 
 .accordion .acc-title {
-    background: var(--groen);
+    background: var(--donkergroen);
     color: white;
     padding: 1em;
     position: relative;
@@ -341,11 +376,14 @@ footer .menu li {
 
 
 @media (min-width: 768px) {
-    .logo-primair {
+
+    .logo-primair,
+    .navigation {
         display: block;
     }
 
-    .logo-secundair {
+    .logo-secundair,
+    .navigation li:last-child {
         display: none;
     }
 
