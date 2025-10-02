@@ -4,7 +4,7 @@
     --donkergroen: #1B4243;
 
     --animationSpeed: 20s;
-
+    --paddingsides: 0 15px;
 }
 
 * {
@@ -17,6 +17,8 @@
 body {
     line-height: 1.4;
     font-size: 16px;
+    background: #FAF9F6;
+    /* padding: 0 15px; */
 }
 
 h1,
@@ -36,14 +38,19 @@ h3 {
     color: var(--groen);
 }
 
-body {
-    background: #FAF9F6;
-    padding: 0 15px;
-}
 
 header {
     background: white;
 }
+
+
+.hero,
+.featured-half-01,
+.home-nieuws,
+.featured-half-02 {
+    padding: var(--paddingsides);
+}
+
 
 /* BEGIN LOGO'S */
 .logo-secundair {
@@ -126,6 +133,7 @@ header {
     background: white;
     width: 100%;
     position: relative;
+    border-radius: 15px;
 
     p {
         color: #484848;
@@ -140,6 +148,7 @@ header {
     width: 100%;
     height: 50%;
     object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 
 .nieuws-card .panel {
@@ -228,9 +237,9 @@ div.accordion {
 
 /* SLIDER */
 .slider {
-    height: 100px;
+    height: 210px;
     margin: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     width: auto;
 }
@@ -247,7 +256,47 @@ div.accordion {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     background: var(--groen);
+    padding: 60px 15px;
+    gap: 45px;
+
+    h4 {
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+        margin-bottom: 7px;
+    }
+}
+
+footer ul {
+    padding-left: 1.5em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 00;
+}
+
+footer .footer-col-01 p {
+    display: flex;
+    align-content: center;
+}
+
+footer .footer-col-01 p::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0e0";
+    padding-right: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+footer .menu li {
+    list-style: none;
+    margin-bottom: 3px;
 }
 
 @keyframes scroll {
