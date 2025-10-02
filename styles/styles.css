@@ -2,6 +2,9 @@
     --groen: #347172;
     --oranje: #D09482;
     --donkergroen: #1B4243;
+
+    --animationSpeed: 20s;
+
 }
 
 * {
@@ -158,10 +161,6 @@ header {
     right: 5%;
 }
 
-
-
-
-
 div.accordion {
     /* position: relative; */
     /* margin: 2em; */
@@ -188,12 +187,6 @@ div.accordion {
 
 /* Accordion open */
 .accordion label::before {
-    /* content: "";
-    display: inline-block;
-    border: 15px solid transparent;
-    border-left: 20px solid white; */
-
-
     font-family: "Font Awesome 5 Free";
     content: "\f078";
 }
@@ -206,37 +199,65 @@ div.accordion {
     gap: 10px;
 }
 
-.accordion div.p {
+.accordion div.acc-content {
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s;
     background-color: white;
-    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
 }
 
-.accordion div.p p {
+.accordion div.acc-content p {
     padding: 2em;
 }
 
 /* Accordion dicht */
 .accordion input:checked~.acc-title label::before {
-    /* border-left: 15px solid transparent;
-    border-top: 20px solid white;
-    margin-top: 12px;
-    margin-right: 10px; */
-
-
     font-family: "Font Awesome 5 Free";
     content: "\f054";
 }
 
-.accordion input:checked~.acc-title~div.p {
+.accordion input:checked~.acc-title~div.acc-content {
     max-height: 100vh;
     border-radius: 0 0 15px 15px;
 }
 
 .accordion a {
     color: var(--groen);
+}
+
+
+/* SLIDER */
+.slider {
+    height: 100px;
+    margin: auto;
+    /* overflow: hidden; */
+    position: relative;
+    width: auto;
+}
+
+.slider .slide-track {
+    animation: scroll var(--animationSpeed) linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+footer {
+    background: var(--groen);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
 }
 
 
