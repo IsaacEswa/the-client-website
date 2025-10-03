@@ -383,7 +383,7 @@ footer .menu li {
     }
 
     .logo-secundair,
-    .navigation li:last-child {
+    #hamburger-icon {
         display: none;
     }
 
