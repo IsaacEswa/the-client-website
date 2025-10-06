@@ -110,22 +110,32 @@ header {
     }
 }
 
+#hamburger-icon {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
 
 
 /* BEGIN LOGO'S */
 .logo-secundair {
     width: 50px;
+    display: block;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .logo-primair,
 .navigation {
     display: none;
 
+    @media (min-width: 768px) {
+        display: block;
+    }
 }
 
-.logo-secundair {
-    display: block;
-}
 
 /* EINDE LOGO'S */
 
@@ -205,6 +215,10 @@ header {
 
     h3 {
         margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+        width: 30%;
     }
 }
 
@@ -375,7 +389,7 @@ footer .menu li {
 }
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
     .logo-primair,
     .navigation {
@@ -390,4 +404,4 @@ footer .menu li {
     .nieuws-card {
         width: 30%;
     }
-}
+} */
