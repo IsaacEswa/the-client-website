@@ -86,11 +86,17 @@ header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 30px;
+    gap: 10px;
 }
 
 .sidebar li,
 .sidebar a {
     width: 100%;
+    list-style: none;
+    text-decoration: none;
+    color: black;
 
 }
 
@@ -110,10 +116,28 @@ header {
     }
 }
 
+#nav-search {
+    padding: 13px;
+    border-radius: 25px;
+    border: none;
+    background: var(--groen);
+    color: white;
+}
+
+#nav-search::placeholder {
+    color: white;
+}
+
 #hamburger-icon {
+    text-align: right;
+
     @media (min-width: 768px) {
         display: none;
     }
+}
+
+#close-icon {
+    text-align: right;
 }
 
 
