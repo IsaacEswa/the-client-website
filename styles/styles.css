@@ -4,7 +4,9 @@
     --donkergroen: #1B4243;
 
     --animationSpeed: 20s;
-    --paddingsides: 0 15px;
+    --paddingsidesMobile: 0 15px;
+    --paddingsidesTablet: 0 50px;
+
 }
 
 * {
@@ -26,14 +28,20 @@ body {
     background-image: url("../assets/hero-bg.jpg");
     padding-top: 65px;
     padding-bottom: 130px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.hero * {
+    @media (min-width: 768px) {
+        max-width: 60%;
+    }
 }
 
 .hero h1,
@@ -107,20 +115,53 @@ header {
 }
 
 
-.featured-half-01,
+
+
+.featured-half,
 .home-nieuws,
-.featured-half-02 {
-    padding: var(--paddingsides);
+.featured-half-rev {
+    padding: var(--paddingsidesMobile);
     margin-top: 60px;
+
+    @media (min-width: 768px) {
+        padding: var(--paddingsidesTablet);
+    }
 
 }
 
-.featured-half-01,
-.featured-half-02 {
+.featured-half,
+.featured-half-rev {
     .btn-primair {
         margin-top: 10px;
     }
+
+    @media (min-width: 768px) {
+        align-items: center;
+    }
 }
+
+.featured-half {
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 5%;
+        display: flex;
+    }
+}
+
+.featured-half-rev {
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        gap: 5%;
+        display: flex;
+    }
+}
+
+.featured-half-content {
+    @media (min-width: 768px) {
+        max-width: 50%;
+    }
+}
+
 
 #nav-search {
     padding: 13px;
@@ -157,6 +198,18 @@ header {
 
 
 /* BEGIN LOGO'S */
+.logo-primair {
+    display: none;
+
+    @media (min-width: 768px) {
+        max-width: 30%;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+
+
 .logo-secundair {
     width: 50px;
     display: block;
@@ -167,12 +220,12 @@ header {
     }
 }
 
-.logo-primair,
 .navigation {
     display: none;
 
     @media (min-width: 768px) {
         display: block;
+
     }
 }
 
@@ -392,6 +445,12 @@ footer {
         font-size: 18px;
         color: white;
         margin-bottom: 7px;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 
