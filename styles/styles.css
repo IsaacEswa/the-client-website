@@ -31,6 +31,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero h1,
@@ -71,6 +74,9 @@ p {
 
 header {
     background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
 }
 
 .sidebar {
@@ -128,8 +134,15 @@ header {
     color: white;
 }
 
+#nav-search::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+}
+
+
 #hamburger-icon {
     text-align: right;
+    list-style: none;
 
     @media (min-width: 768px) {
         display: none;
@@ -138,6 +151,8 @@ header {
 
 #close-icon {
     text-align: right;
+    padding-right: 15px;
+    margin-top: -10px;
 }
 
 
@@ -145,6 +160,7 @@ header {
 .logo-secundair {
     width: 50px;
     display: block;
+    object-fit: contain;
 
     @media (min-width: 768px) {
         display: none;
@@ -204,6 +220,11 @@ header {
     content: "\f061";
     display: inline-block;
     padding-left: 15px;
+    color: var(--donkergroen);
+}
+
+.btn-tertiair a:hover {
+    color: var(--groen);
 }
 
 /* EINDE BUTTONS */
