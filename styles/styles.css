@@ -38,8 +38,11 @@ body {
     background-position: center;
 
     @media (min-width: 768px) {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 70px 50px 150px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 100px 50px 180px;
     }
 }
 
