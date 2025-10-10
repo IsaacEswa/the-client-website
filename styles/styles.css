@@ -172,6 +172,12 @@ header {
     }
 }
 
+.featured-half-img-container {
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
 
 #nav-search {
     padding: 13px;
@@ -304,11 +310,15 @@ header {
 /* EINDE BUTTONS */
 
 .featured-half-img {
-    height: 350px;
+    height: 250px;
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
     margin-top: 30px;
+
+    @media (min-width: 768px) {
+        height: 450px;
+    }
 }
 
 .home-nieuws h2 {
